@@ -1,0 +1,23 @@
+<div>
+    <h3>Todos List</h3>
+    <table class="table table-striped" style= "margin-top: 20px">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Responsible</th>
+                <th>Priority</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>              
+            <tr *ngFor="let todo of todos">
+                <td>{{todo.todo_description}}</td>
+                <td>{{todo.todo_responsible}}</td>
+                <td>{{todo.todo_priority}}</td>
+                <td>
+                    <a routerLink="{{'/edit/' + todo._id}}">Edit</a>
+                </td> 
+            </tr>
+        </tbody>
+    </table>
+</div>
